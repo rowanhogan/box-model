@@ -1,0 +1,46 @@
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font: normal 100%/1.5em 'Montserrat';
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+}
+
+h1, h2, h3 {
+  margin: 0 0 1em;
+  line-height: 1.25em;
+  font-weight: normal;
+}
+
+nav {
+  display: block;
+  background: whitesmoke;
+  text-align: center;
+  margin: 0 auto 1.5em;
+}
+
+nav a {
+  display: inline-block;
+  font-size: 90%;
+  line-height: 1.5em;
+  padding: .5em;
+  color: #666;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+nav a.active {
+  color: #111;
+}
+

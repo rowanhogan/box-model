@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Positioning</title>
+  <link rel="stylesheet" type="text/css" href="base.css">
+  <link rel="shortcut icon" href="favicon.png">
+</head>
+<body>
+  <nav>
+    <a href="/box-model.html">Overview</a>
+    <a href="/positioning.html" class="active">Positioning</a>
+  </nav>
+
+  <div class="container">
+    <h2>Columns</h2>
+
+    <div class="boxes">
+      <div class="box half"></div>
+      <div class="box half"></div>
+      <div class="box half"></div>
+      <div class="box half"></div>
+      <div class="box half"></div>
+    </div>
+
+    <div class="boxes">
+      <div class="box third"></div>
+      <div class="box third"></div>
+      <div class="box third"></div>
+      <div class="box third"></div>
+      <div class="box third"></div>
+    </div>
+  </div>
+
+  <style type="text/css">
+
+    .container {
+      margin: auto;
+      padding: 3em;
+      max-width: 60em;
+    }
+
+    .boxes {
+      text-align: left;
+      margin: 3em .333em;
+    }
+
+    .box {
+      display: inline-block;
+      width: 100%;
+      vertical-align: top;
+      height: 6em;
+      margin: 0 -.333em;
+      background: #ddd;
+      border: .25em solid #eee;
+    }
+
+    .box.half { width: 50%; }
+
+    .box.third { width: 33.333%; }
+
+    @media screen and (max-width: 42em) {
+      .box { width: 100% !important; }
+    }
+
+    @media screen and (max-width: 32em) {
+      .container { padding: 1.5em; }
+    }
+
+  </style>
+
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
