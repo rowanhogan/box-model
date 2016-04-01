@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>The Box Model or CSS for Back-end Developers</title>
+
+    <link href='//fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+    <link href="../stylesheets/base.css" rel="stylesheet" />
+    <script src="../javascripts/all.js"></script>
+    <link href="../images/favicon.png" rel="icon" type="image/png" />
+  </head>
+
+  <body class="box-model box-model_index">
+
+    <nav>
+      <a class="active" href="/box-model">Box</a>
+      <a href="/flow">Flow</a>
+      <a href="/positioning">Positioning</a>
+      <a href="/type">Type</a>
+    </nav>
+
+    
+<h2>The Box Model</h2>
+
+<div class="container">
+
+  <div class="box">
+    <div class="content">Content</div>
+  </div>
+
+  <div class="box">
+    <div class="content">Content</div>
+  </div>
+
+</div>
+
+<style type="text/css">
+
+  .container {
+    padding-top: .5em;
+  }
+
+  .box {
+    position: relative;
+    box-sizing: border-box;
+    background-color: #444;
+    width: 75vh;
+    max-width: 100%;
+    margin: 3em auto;
+    padding: 3em;
+    border: 3em solid #222;
+    color: rgba(255,255,255, .125);
+    transition: color 500ms ease;
+  }
+
+  .box:hover {
+    color: white;
+    cursor: help;
+  }
+
+  .box:hover:after {
+    opacity: 1;
+  }
+
+  .content {
+    background-color: #666;
+    height: 25vh;
+    padding-top: 1em;
+  }
+
+  .box:before,
+  .box:after,
+  .content:before,
+  .content:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 10px;
+    line-height: 1em;
+  }
+
+  .content:before {
+    content: 'padding';
+    top: 1em;
+  }
+
+  .box:before {
+    content: 'border';
+    top: -2em;
+  }
+
+  .box:after {
+    content: 'margin';
+    top: -6em;
+    left: -6em;
+    right: -6em;
+    bottom: -6em;
+    padding: 1em;
+    opacity: 0.1;
+    color: #222;
+    border: 1px dashed #222;
+    transition: opacity 350ms ease;
+    transition-delay: 250ms;
+  }
+
+
+</style>
+
+  </body>
+</html>
