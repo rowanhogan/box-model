@@ -1,3 +1,4 @@
+@charset "utf-8";
 
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 
@@ -18,29 +19,41 @@ html {
   letter-spacing: .25em;
 }
 
+nav {
+  display: block;
+  background: whitesmoke;
+  text-align: center;
+  margin: 0 auto 1.5em;
+
+  a {
+    display: inline-block;
+    font-size: 90%;
+    line-height: 1.5em;
+    padding: .5em;
+    color: #666;
+    text-decoration: none;
+    letter-spacing: 1px;
+
+    &.active {
+      color: #111;
+    }
+  }
+}
+
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
 h1, h2, h3 {
   margin: 0 0 1em;
   line-height: 1.25em;
   font-weight: normal;
 }
 
-nav {
-  display: block;
-  background: whitesmoke;
-  text-align: center;
-  margin: 0 auto 1.5em;
+.container {
+  margin: auto;
+  padding: 3em;
+  max-width: 60em;
 }
-
-nav a {
-  display: inline-block;
-  font-size: 90%;
-  line-height: 1.5em;
-  padding: .5em;
-  color: #666;
-  text-decoration: none;
-  letter-spacing: 1px;
-}
-nav a.active {
-  color: #111;
-}
-

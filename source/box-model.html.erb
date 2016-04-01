@@ -1,0 +1,86 @@
+
+<h2>The Box Model</h2>
+
+<div class="container">
+
+  <div class="box">
+    <div class="content">Content</div>
+  </div>
+
+  <div class="box">
+    <div class="content">Content</div>
+  </div>
+
+</div>
+
+<style type="text/css">
+
+  .container {
+    padding-top: .5em;
+  }
+
+  .box {
+    position: relative;
+    box-sizing: border-box;
+    background-color: #444;
+    width: 75vh;
+    max-width: 100%;
+    margin: 3em auto;
+    padding: 3em;
+    border: 3em solid #222;
+    color: rgba(255,255,255, .125);
+    transition: color 500ms ease;
+  }
+
+  .box:hover {
+    color: white;
+    cursor: help;
+  }
+
+  .box:hover:after {
+    opacity: 1;
+  }
+
+  .content {
+    background-color: #666;
+    height: 25vh;
+    padding-top: 1em;
+  }
+
+  .box:before,
+  .box:after,
+  .content:before,
+  .content:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 10px;
+    line-height: 1em;
+  }
+
+  .content:before {
+    content: 'padding';
+    top: 1em;
+  }
+
+  .box:before {
+    content: 'border';
+    top: -2em;
+  }
+
+  .box:after {
+    content: 'margin';
+    top: -6em;
+    left: -6em;
+    right: -6em;
+    bottom: -6em;
+    padding: 1em;
+    opacity: 0.1;
+    color: #222;
+    border: 1px dashed #222;
+    transition: opacity 350ms ease;
+    transition-delay: 250ms;
+  }
+
+
+</style>

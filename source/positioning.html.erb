@@ -1,0 +1,55 @@
+---
+title: Positioning
+---
+
+<h2>Positions</h2>
+
+<div class="box top left">Top Left</div>
+<div class="box top right">Top Right</div>
+
+<div class="box left center">Left Center</div>
+<div class="box middle center">Center</div>
+<div class="box right center">Right Center</div>
+
+<div class="box bottom left">Bottom Left</div>
+<div class="box bottom right">Bottom Right</div>
+
+<div class="box bottom middle">Bottom Center</div>
+
+<style type="text/css">
+
+
+  .box {
+    position: fixed;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+    background: #ddd;
+    box-sizing: border-box;
+    border: 1em solid #eee;
+  }
+
+  .top {
+    top: 0;
+    margin-top: 3.25em;
+  }
+
+  .left { left: 0; }
+  .right { right: 0; }
+  .bottom { bottom: 0; }
+
+  .middle {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .center {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .middle.center {
+    transform: translate(-50%, -50%);
+  }
+
+</style>

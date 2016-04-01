@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title ? "#{current_page.data.title} | " : nil %>The Box Model or CSS for Back-end Developers</title>
+
+    <link href='//fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+    <%= stylesheet_link_tag :base %>
+    <%= javascript_include_tag :all %>
+    <%= favicon_tag "favicon.png" %>
+  </head>
+
+  <body class="<%= page_classes %>">
+
+    <nav>
+      <%= menu_link "box-model", "Box" %>
+      <%= menu_link "flow", "Flow" %>
+      <%= menu_link "positioning", "Positioning" %>
+      <%= menu_link "type", "Type" %>
+    </nav>
+
+    <%= yield %>
+  </body>
+</html>
